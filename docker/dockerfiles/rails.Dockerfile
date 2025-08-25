@@ -6,5 +6,5 @@ ENV PATH="$PNPM_HOME:$PATH"
 RUN chmod +x docker/entrypoints/rails.sh
 
 EXPOSE 3000
-CMD ["sh", "-c", "bundle exec rails db:migrate && bundle exec puma -C config/puma.rb"]
+
 CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3000"]
